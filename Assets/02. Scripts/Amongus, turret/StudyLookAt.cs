@@ -9,7 +9,7 @@ public class StudyLookAt : MonoBehaviour
     public Transform[] firePos; //발사 위치
 
     public float timer;
-    public float colldownTime;
+    public float cooldownTime; // 총알의 쿨타임
     
     
     
@@ -23,10 +23,10 @@ public class StudyLookAt : MonoBehaviour
         turretHead.LookAt(targetTf);
         
         timer += Time.deltaTime;
-        if (timer >= colldownTime)
+        if (timer >= cooldownTime)
         {
             timer = 0f;
-            for (int i = 0; i < firePos.Length; i++)
+            for (int i = 0; i < firePos.Length; i++) // 총열을 4개 사용 했기 때문에 반복문 사용
             {
                 Instantiate(bulletPrefab, firePos[i].position,firePos[i].rotation);
             }

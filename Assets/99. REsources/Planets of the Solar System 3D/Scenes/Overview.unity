@@ -1277,7 +1277,7 @@ MonoBehaviour:
   targetPlanet: {fileID: 256709530}
   rotSpeed: 24.205061
   revolutionSpeed: 173.70905
-  isRevolution: 0
+  isRevolution: 1
 --- !u!850595691 &1182094114
 LightingSettings:
   m_ObjectHideFlags: 0
